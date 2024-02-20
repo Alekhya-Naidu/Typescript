@@ -1,0 +1,222 @@
+/* Roles section */
+
+.roles-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-family: 'Public Sans', sans-serif;
+}
+.role-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.role-header-content{
+    display: flex;
+    flex-direction: column;
+}
+.role-title{
+    color: rgb(103, 108, 109);
+    margin: 0;
+}
+.role-header-content p{
+    font-size: 10px;
+    color :rgb(182, 190, 196);
+}
+.role-header a{
+    text-decoration: none;
+}
+.add-role-btn{
+    display: flex;
+    gap : 1rem;
+    margin-top: .5rem;
+}
+.add-role-btn button{
+    display: flex;
+    border-radius: 5px;
+    color: white;
+    background-color: #F44848;
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 11px;
+}
+/* Filter bar */
+
+.filter{
+    display: flex;
+    background-color: #fff4f4;
+    border: 1px solid #ff9494;
+    border-radius: 5px;
+    padding: .6rem;
+    align-items: center;
+    font-family: 'Public Sans', sans-serif;
+    margin-top: 1rem;
+}
+.filter-dept-location{
+    display: flex;
+    width: 100%;
+}
+.filter-dept-location span{
+    color: #F44848;
+    font-size: 12px;
+    margin-right: .5rem;
+    padding-top: .5rem;
+}
+.filter-dept-location img{
+    width: 1rem;
+    height: 1rem;
+    padding-top: .5rem;
+}
+.filter-dept-location select{
+    font-size: 12px;
+    border: 1px solid #ff9494;
+    outline: none;
+    padding: .5rem;
+    border-radius: 5px;
+    margin : 0 .5rem;
+    cursor: pointer;
+}
+option :first{
+    color: grey;
+}
+.filter-btn{
+    display: flex;
+}
+.reset{
+    background-color: white;
+    color: #F44848;
+    border: 1px solid #F44848;
+    border-radius: 5px;
+    margin-right: 1rem;
+    width: 4rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+.apply{
+    background-color: #F44848;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 4rem;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+/* card section */
+
+.card-section{
+    display: flex;
+    margin-top: 1rem;
+    font-family: 'Public Sans', sans-serif;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    border: 1px solid rgb(211, 207, 207);
+    border-radius: 5px;
+    padding: 1.5rem 1rem;
+    width: 16.5rem;
+    margin-bottom: .5rem;
+    position: relative;
+}
+.card-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.card-title span{
+    font-size: 15px;
+    font-weight: 800;
+}
+.card-title img{
+    cursor: pointer;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+}
+.card-dept{
+    display: flex;
+    justify-content: space-between;
+    color: #726a6a;
+    font-size: 13px;
+    line-height: 1.5rem;
+}
+.card-dept-heading{
+    align-items: center;
+}
+.card-alldetail{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 11px;
+    color: #726a6a;
+    cursor: pointer;
+    align-items: center;
+}
+.card-alldetail span{
+    margin-top: 0;
+    font-size: 13px;
+}
+.card-alldetail a{
+    text-decoration: none;
+    color: #726a6a;
+    align-items: center;
+}
+
+.card-alldetail img{
+    width: 1rem;
+    height: 1rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    margin-top: .2rem;
+}
+.card-dept-value{
+    display: flex;
+}
+.card-dept-value img{
+    width: 1rem;
+    height: 1rem;
+}
+.overlap-image1{
+    position: absolute;
+    right: 4rem;
+    z-index: 1;
+}
+.overlap-image2{
+    position: absolute;
+    right: 3.3rem;
+    z-index: 2;
+}
+.overlap-image3{
+    position: absolute;
+    right: 2.7rem;
+    z-index: 3;
+}
+.overlap-image4{
+    position: absolute;
+    right: 2.1rem;
+    z-index: 4;
+}
+.overlap-image5{
+    width : 1.1rem;
+    height: 1.1rem;
+    position: absolute;
+    top : 7.9rem;
+    right: 1.3rem;
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 8px;
+    justify-content: center;
+}
+.overlap-image5 span{
+    margin: 0;
+    padding-bottom: .5rem;
+}

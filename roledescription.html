@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Role Details</title>
+        <link rel="stylesheet" href="css/roledescription.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Sidebar section -->
+        <div id="empSideBar" class="sidebar">
+            <div class="logo">
+                <img class="tezo-logo" src="assets/images/tezo-logo.png" alt="Tezo company logo" />
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ALL</span>
+                <a title="Employee" href="index.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/dashboard-grey.svg" alt="Icon of dashboard" />      
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+                <a title="Employee" href="employee.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/employee-grey.svg" alt="Icon of employee" />
+                            <span>Employees</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ROLE / USER MANAGEMENT</span>
+                <a href="roles.html">
+                    <div class="all-content-box">
+                        <div class="all-content-info">
+                            <img src="assets/icons/roles.svg" alt="Icon of roles" />
+                            <span>Roles</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right.svg" alt="Right pointing arrow" />
+                        </div>
+                    </div>
+                </a>
+                <div class="all-content">
+                    <div class="all-content-info">
+                        <img src="assets/icons/access-right.svg" alt="Icon of access rights" />      
+                        <span>Access rights</span>
+                    </div>
+                    <div class="all-content-arrow">
+                        <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow" />
+                    </div>
+                </div>
+            </div>
+            <div class="update">
+                <div class="update-info">
+                    <span>Install new update 2.3.1A</span>
+                    <p>Allow to launch the new update for the AD application</p>
+                </div>
+                <div class="update-buttons">
+                    <button class="dismiss">Dismiss</button>
+                    <button class="accept">Accept</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- minised screen icons  -->
+        <div class="minimised-icons">
+            <img src="assets/icons/dashboard-grey.svg" alt="Dashboard icon" />
+            <img src="assets/icons/employee-grey.svg" alt="Employee icon"/>
+            <img src="assets/icons/roles.svg" alt="Roles icon" />
+            <img src="assets/icons/access-right.svg" alt="Assigning user icon" />
+        </div>
+
+        <div id="mainBody" class="container-body">
+            <!-- Search header -->
+            <img id="handleIcon" class="handle-icon" onclick="app.sideBar()" src="assets/images/handle.png" alt="Closure of sidebar icon" />
+            <div class="searchbar-section">
+                <div class="main-header">
+                    <div class="header-icon-search">
+                        <div class="search-icon">
+                            <img src="assets/images/search.png" alt="Search icon" />
+                        </div>
+                        <div class="search-content">
+                            <input type="text" name="name" placeholder="Search (Ctrl+l)" size="60">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-section-icons">
+                            <button><img src = "assets/images/language.png" alt="Language change option" /></button>
+                            <button><img src = "assets/images/more.png" alt="More icon with four dots" /></button>
+                            <button><img src = "assets/images/theme.png" alt="Theme change symbol, a moon" /></button>
+                            <button><img src = "assets/images/bell.png" alt="Notification icon" /></button>
+                        </div>
+                        <div class="profile">
+                            <img src="assets/images/profile.png" alt="Profile picture" />
+                            <span class="status-icon"></span>
+                            <div class="profile-info">
+                                <span>John Abraham</span>
+                                <span class="admin">Admin</span>
+                            </div>
+                            <div class="down-arrow">
+                                <img src="assets/icons/expand-more.svg" alt="Icon to expand more" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        
+            <!-- Roles Description section -->
+            <div class="roles-section">
+                <div class="role-header">
+                    <div class="role-header-content">
+                        <div class="role-title">
+                            <h5>Roles</h5>
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Riht Pointing arrow in grey" />
+                            <h5>Employees</h5>
+                        </div>
+                        <p>All the roles are configured here</p>
+                    </div>
+                    <div class="add-role-btn">
+                        <button>
+                            <img src="assets/icons/add.svg" alt="Plus symbol" />
+                            <span>ADD EMPLOYEE</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="role-description">
+                    <h4>Role Description</h4>
+                    <p>Configure the providers that are available to users when they sign in. Configure the providers that are available to users when they sign in. Configure the providers that are available to users when they sign in.  Configure the providers that are available to users when they sign in.</p>
+                </div>
+                <div class="card-section">
+                    <div class = "card">
+                        <div class="card-profile">
+                            <div class="card-profile-img">
+                                <img src="assets/Images/man-profile.png" alt="Profile picture of a man" />
+                            </div>
+                            <div class="card-profile-info">
+                                <span class="profile-name">Robert Fox</span>
+                                <span>Head of Product Design</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <img src="assets/icons/access-right.svg" alt="Icon of account" />
+                                <span>INF122</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/email.svg" alt="Icon of mail" />
+                                <span>adamk@yahoo.com</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                <span>Technology</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/location.svg" alt="Icon of location" />
+                                <span>Stockton, New Hampshire</span>
+                            </div>
+                            <div class="card-alldetail">
+                                <span>View </span>
+                                <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-profile">
+                            <div class="card-profile-img">
+                                <img src="assets/Images/boy-profile.png" alt="Profile picture of a man" />
+                            </div>
+                            <div class="card-profile-info">
+                                <span class="profile-name">Marvin McKinney</span>
+                                <span>Head of Engineering</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <img src="assets/icons/account.svg" alt="Icon of account" />
+                                <span>INF150</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/email.svg" alt="Icon of mail" />
+                                <span>sravani@yahoo.com</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                <span>Admin</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/location.svg" alt="Icon of location" />
+                                <span>Syracuse, Connecticut</span>
+                            </div>
+                            <div class="card-alldetail">
+                                <span>View </span>
+                                <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-profile">
+                            <div class="card-profile-img">
+                                <img src="assets/Images/girl-profile.png" alt="Profile picture of a man" />
+                            </div>
+                            <div class="card-profile-info">
+                                <span class="profile-name">Eleanor Pena</span>
+                                <span>Senior Interactive Designer</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <img src="assets/icons/account.svg" alt="Icon of account" />
+                                <span>INF1240</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/email.svg" alt="Icon of mail" />
+                                <span>grolschie@mac.com</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                <span>Customer Executive</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/location.svg" alt="Icon of location" />
+                                <span>Portland, Illinios</span>
+                            </div>
+                            <div class="card-alldetail">
+                                <span>View </span>
+                                <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-profile">
+                            <div class="card-profile-img">
+                                <img src="assets/Images/women-profile.png" alt="Profile picture of a man" />
+                            </div>
+                            <div class="card-profile-info">
+                                <span class="profile-name">Jane Cooper</span>
+                                <span>Product Analyst</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <img src="assets/icons/account.svg" alt="Icon of account" />
+                                <span>INF389</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/email.svg" alt="Icon of mail" />
+                                <span>chronos@aol.com</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                <span>Product</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/location.svg" alt="Icon of location" />
+                                <span>Coppell, Virginia</span>
+                            </div>
+                            <div class="card-alldetail">
+                                <span>View </span>
+                                <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-profile">
+                            <div class="card-profile-img">
+                                <img src="assets/Images/emp-profile.png" alt="Profile picture of a man" />
+                            </div>
+                            <div class="card-profile-info">
+                                <span class="profile-name">Floyd Miles</span>
+                                <span>Visual Designer</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <img src="assets/icons/account.svg" alt="Icon of account" />
+                                <span>INF1209</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/email.svg" alt="Icon of mail" />
+                                <span>dgatwood@msn.com</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                <span>Customer Executive</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/location.svg" alt="Icon of location" />
+                                <span>Lansing, Illinios</span>
+                            </div>
+                            <div class="card-alldetail">
+                                <span>View </span>
+                                <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-profile">
+                            <div class="card-profile-img">
+                                <img src="assets/Images/party-profile.png" alt="Profile picture of a man" />
+                            </div>
+                            <div class="card-profile-info">
+                                <span class="profile-name">Dianne Russell</span>
+                                <span>Full Stack Software Engineeri</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <img src="assets/icons/account.svg" alt="Icon of account" />
+                                <span>INF922</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/email.svg" alt="Icon of mail" />
+                                <span>kspiteri@live.com</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                <span>Human Research</span>
+                            </div>
+                            <div class="card-dept">
+                                <img src="assets/icons/location.svg" alt="Icon of location" />
+                                <span>Corona, Michigan</span>
+                            </div>
+                            <div class="card-alldetail">
+                                <span>View </span>
+                                <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </body>
+</html>
