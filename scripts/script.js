@@ -528,7 +528,8 @@ const app = (function(){
         const deleteOpt = document.querySelector('.delete-btn button');
         if (checkbox.checked) {
             deleteOpt.style.backgroundColor = '#F44848';
-        } else {
+        } 
+        else {
             const check = document.querySelectorAll('input[type = "checkbox"]:checked').length > 0;
             if (!check) {
                 deleteOpt.style.backgroundColor = '#F89191';

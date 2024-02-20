@@ -5,24 +5,21 @@ const app = (function(){
     var filterBar_var: boolean = true;
     let sortOrders:{[key : number]: string} = {};
     var opt_var: boolean = true;
-    var letter = "";
+    var letter: string = "";
     const employees = JSON.parse(localStorage.getItem('employees') || "[]") || [];
     const tableBody = document.getElementById('tBody');
-    const statusOpt: {value: string;
-        name: string;}[] = [
+    const statusOpt: {value: string; name: string;}[] = [
         { value: 'default', name: 'Status' },
         { value: 'Active', name: 'Active'},
         { value: 'InActive', name: 'InActive' }
     ];
-    const LocationOpt : {value: string;
-        name: string;}[] = [
+    const LocationOpt : {value: string; name: string;}[] = [
         { value: 'default', name: 'Location' },
         { value: 'US', name: 'US' },
         { value: 'UK', name: 'UK' },
         { value: 'Hyderabad', name: 'Hyderabad'}
     ];
-    const DepartmentOpt : {value: string;
-        name: string;}[] = [
+    const DepartmentOpt : {value: string; name: string;}[] = [
         { value: 'default', name: 'Department' },
         { value: 'IT', name: 'IT' },
         { value: 'PE', name: 'PE' }
@@ -192,15 +189,34 @@ const app = (function(){
         rows.forEach(rowdata => tableBody.appendChild(rowdata));
     }
 
+    //creating alphabet buttons
+    document.addEventListener("DOMContentLoaded", function() {
+        const alphabetContent = document.querySelector('.alphabet-content');
+        for (let i = 65; i <= 90; i++) {
+            const letter = String.fromCharCode(i);
+            const btn = document.createElement('button');
+            btn.textContent = letter;
+            btn.dataset.letter = letter;
+            btn.addEventListener('click', function(e) {
+                const clickedBtn = e.target as HTMLElement;
+                const letterValue = clickedBtn.textContent;
+                if(letterValue){
+                    alpha(letterValue);
+                }
+            });
+            alphabetContent?.appendChild(btn);
+        }
+    });
 
+    // Employee class creation
     class Employee{
         empNo: number;
         firstName: string;
         lastName: string;
-        dob: Date;
+        dob: string;
         email:string;
         mobileNumber:number;
-        joinDate: Date;
+        joinDate: string;
         location: string;
         role: string;
         department: string;
@@ -209,7 +225,7 @@ const app = (function(){
         status: string;
         profileImg:string
     
-        constructor(empNo: number, firstName: string, lastName: string, dob: Date, email: string, mobileNumber: number, joinDate: Date, location: string, 
+        constructor(empNo: number, firstName: string, lastName: string, dob: string, email: string, mobileNumber: number, joinDate: string, location: string, 
             role: string, department: string, manager: string, project: string, status: string = "Active", profileImg: string){
                 this.empNo = empNo;
                 this.firstName = firstName;
@@ -253,10 +269,10 @@ const app = (function(){
         const empNo = parseInt((document.getElementById('empNum')as HTMLInputElement).value);
         const firstName = (document.getElementById('fname')as HTMLInputElement).value;
         const lastName = (document.getElementById('lname')as HTMLInputElement).value;
-        const dob = new Date((document.getElementById('dob')as HTMLInputElement).value);
+        const dob = (document.getElementById('dob')as HTMLInputElement).value;
         const email = (document.getElementById('mail')as HTMLInputElement).value;
         const mobileNumber = parseInt((document.getElementById('number')as HTMLInputElement).value);
-        const joinDate = new Date((document.getElementById('jdate')as HTMLInputElement).value);
+        const joinDate = (document.getElementById('jdate')as HTMLInputElement).value;
         const location = (document.getElementById('location')as HTMLSelectElement).value;
         const role = (document.getElementById('Role')as HTMLSelectElement).value;
         const department = (document.getElementById('department')as HTMLSelectElement).value;
@@ -362,7 +378,7 @@ const app = (function(){
             let profileImgSrc;
             reader.onload = function(e) {
                 if(e && e.target){
-                    profileImgSrc = e.target?.result as string;
+                    profileImgSrc = e.target.result as string;
                     profileImg.setAttribute('src', profileImgSrc);
                 }
             }
@@ -416,9 +432,10 @@ const app = (function(){
         return data;
     }
 
-    function createJdate(text: Date){
+    function createJdate(text: string){
         const data = document.createElement('td');
-        data.textContent = (text).toDateString();
+        const formatedDate = text;
+        data.textContent = formatedDate;
         return data;
     }
 
@@ -597,6 +614,17 @@ const app = (function(){
         (deleteOpt as HTMLElement).style.backgroundColor = '#F89191';
     }
 
+    document.getElementById('addEmpBtn')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        addEmployee();
+    });
+
+    document.getElementById('tBody')?.addEventListener('change', function(event){
+        const target = event.target as HTMLInputElement;
+        if(target && target instanceof HTMLInputElement && target.type === 'checkbox'){
+            deleteButtonCheck(target);
+        }
+    });
 
     return {
         sideBar, empInfo, filterBar, dropDown,exportData, cancel, createSelect, sortColumn, addEmployee, displayAllData, 

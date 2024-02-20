@@ -1,10 +1,4 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-var __webpack_exports__ = {};
-/*!**********************!*\
-  !*** ./src/index.ts ***!
-  \**********************/
-
+"use strict";
 const app = (function () {
     var _a, _b;
     var sidebar_var = true;
@@ -237,10 +231,10 @@ const app = (function () {
         const empNo = parseInt(document.getElementById('empNum').value);
         const firstName = document.getElementById('fname').value;
         const lastName = document.getElementById('lname').value;
-        const dob = new Date(document.getElementById('dob').value);
+        const dob = document.getElementById('dob').value;
         const email = document.getElementById('mail').value;
         const mobileNumber = parseInt(document.getElementById('number').value);
-        const joinDate = new Date(document.getElementById('jdate').value);
+        const joinDate = document.getElementById('jdate').value;
         const location = document.getElementById('location').value;
         const role = document.getElementById('Role').value;
         const department = document.getElementById('department').value;
@@ -380,25 +374,10 @@ const app = (function () {
         data.appendChild(btn);
         return data;
     }
-    // function createJdate(text: Date){
-    //     const data = document.createElement('td');
-    //     const formatedDate = text.toLocaleDateString();
-    //     data.textContent = formatedDate;
-    //     return data;
-    // }
-    function createJdate(joinDate) {
+    function createJdate(text) {
         const data = document.createElement('td');
-        // Check if joinDate is a Date object
-        console.log("Hii");
-        console.log(joinDate instanceof Date); // Check if joinDate is a Date object
-        if (joinDate instanceof Date) {
-            console.log(joinDate); // Log the joinDate object to see its value
-            const formattedDate = joinDate.toLocaleDateString(); // Convert Date to string
-            data.textContent = formattedDate; // Set the formatted date as text content
-        }
-        else {
-            data.textContent = "Invalid Date"; // Provide a default text if joinDate is not a Date object
-        }
+        const formatedDate = text;
+        data.textContent = formatedDate;
         return data;
     }
     function createMore() {
@@ -567,6 +546,3 @@ const app = (function () {
         storeImage, alpha, applyFilter, resetFilter, deleteButtonCheck, deleteCheckedRows
     };
 })();
-
-/******/ })()
-;
