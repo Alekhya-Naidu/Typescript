@@ -1,0 +1,122 @@
+/* Add Employee section */
+.add-employee-section{
+    width: 100%;
+    font-family: 'Public Sans', sans-serif;
+    position: relative;
+}
+.add-employee-section h4{
+    font-weight: 500;
+}
+.emp-img-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+.employee-profile{
+    display: flex;
+    align-items: center;
+}
+.employee-profile img{
+    width: 4rem;
+    height: 4rem;
+}
+.employee-profile button{
+    font-size: 10px;
+    font-weight: 500;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    background-color: #F44848;
+    border-radius: 3px;
+    color: white;
+    padding: .5rem;
+    cursor: pointer;
+}
+.per-emp-info{
+    width: 100%;
+}
+.per-info-title{
+    margin-bottom: 1rem;
+}
+.per-info-title span{
+    font-size: 13px;
+    font-weight: 600;
+}
+.emp-row{
+    display: flex;
+    gap: 1rem;
+}
+.emp-row-content{
+    display: flex;
+    width: 15rem;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.emp-row-content label{
+    font-size: 12px;
+    margin-bottom: .2rem;
+    color: #3d4c5a;
+    font-weight: 500;
+}
+.emp-row-content input{
+    width: 100%;
+    height: 2rem;
+    border: 1.5px solid rgb(201, 197, 197);
+    border-radius: 2px;
+    font-size: 12px;
+    color: rgb(35, 35, 35);
+}
+.emp-row-content input::placeholder{
+    color: rgb(192, 199, 201);;
+}
+.per-info input{
+    width: 50rem;
+}
+.emp-row-content select{
+    width : 100%;
+    height: 2.3rem;
+    border: none;
+    background-color: #f3f3f6b5;
+    border-radius: 5px;
+}
+.add-emp-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.cancel, .add-emp{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+    cursor: pointer;  
+}
+.cancel{
+    height: 2rem;
+    color: #F44848;
+    background-color: #FDE9E9;
+    margin-right: 1rem;
+} 
+.add-emp{
+    height: 2rem;
+    color: white;
+    background-color: #F44848;
+}
+.cancel button,.add-emp button{
+    font-size: 10px;
+    font-weight: 500; 
+}
+.is-active{
+    display: none;
+}
+.toaster-section{
+    width : 10rem;
+    background-color: #FDE9E9;
+    position: absolute;
+    top: 25rem;
+    right : 1rem;
+    padding: 1rem;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

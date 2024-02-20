@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/employee.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Tezo Employee details</title>
+    </head>
+    <body onload="app.displayAllData();">
+        <!-- Sidebar section -->
+        <div id="empSideBar" class="sidebar">
+            <div class="logo">
+                <img class="tezo-logo" src="assets/Images/tezo-logo.png" alt="Tezo company logo" />
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ALL</span>
+                <a title="Employee" href="index.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/dashboard-grey.svg" alt="Icon of dashboard" />      
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+                <div class="all-content-box" onclick="app.empInfo()">
+                    <div class="all-content-info">
+                        <img src="assets/icons/employee.svg" alt="Icon of employee" />
+                        <span>Employees</span>
+                    </div>
+                    <div class="all-content-arrow">
+                        <img src="assets/icons/chevron-right.svg" alt="Right pointing arrow">
+                    </div>
+                </div>
+                <div class="all-list">
+                    <li>
+                        <div class="all-content-list">
+                            <img src="assets/Images/circle.png" alt="Radio button">
+                            <span>All</span>
+                        </div>               
+                    </li>
+                    <li>
+                        <div class="all-content-list">
+                            <img src="assets/Images/circle.png" alt="Radio button">
+                            <span>Active</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="all-content-list">
+                            <img src="assets/Images/circle.png" alt="Radio button">
+                            <span>In Active</span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ROLE / USER MANAGEMENT</span>
+                <a href="roles.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/roles-grey.svg" alt="Icon of roles in grey color" />
+                            <span>Roles</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow" />
+                        </div>
+                    </div>
+                </a>
+                <div class="all-content">
+                    <div class="all-content-info">
+                        <img src="assets/icons/access-right.svg" alt="Icon of access rights" />       
+                        <span>Access rights</span>
+                    </div>
+                    <div class="all-content-arrow">
+                        <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow" />
+                    </div>
+                </div>
+            </div>
+            <div class="update">
+                <div class="update-info">
+                    <span>Install new update 2.3.1A</span>
+                    <p>Allow to launch the new update for the AD application</p>
+                </div>
+                <div class="update-buttons">
+                    <button onclick="app.updateField()" class="dismiss">Dismiss</button>
+                    <button class="accept">Accept</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- minised screen icons  -->
+        <div class="minimised-icons">
+            <img src="assets/icons/dashboard-grey.svg" alt="Dashboard icon" />
+            <img src="assets/icons/employee.svg" alt="Employee icon"/>
+            <img src="assets/icons/roles-grey.svg" alt="Roles icon" />
+            <img src="assets/icons/access-right.svg" alt="Assigning user icon" />
+        </div>
+
+        <div id="mainBody" class="container-body">
+            <!-- Search header -->
+            <img id="handleIcon" class="handle-icon" onclick="app.sideBar()" src="assets/Images/handle.png" alt="Closure of sidebar icon" />
+            <div class="searchbar-section">
+                <div class="main-header">
+                    <div class="header-icon-search">
+                        <div class="search-icon">
+                            <img src="assets/Images/search.png" alt="Search icon" />
+                        </div>
+                        <div class="search-content">
+                            <input type="text" name="name" placeholder="Search (Ctrl+l)" size="60">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-section-icons">
+                            <button><img src = "assets/Images/language.png" alt="Language change option" /></button>
+                            <button><img src = "assets/Images/more.png" alt="More icon with four dots" /></button>
+                            <button><img src = "assets/Images/theme.png" alt="Theme change symbol, a moon" /></button>
+                            <button><img src = "assets/Images/bell.png" alt="Notification icon" /></button>
+                        </div>
+                        <div class="profile">
+                            <img src="assets/Images/profile.png" alt="Profile picture" />
+                            <span class="status-icon"></span>
+                            <div class="profile-info">
+                                <span>John Abraham</span>
+                                <span class="admin">Admin</span>
+                            </div>
+                            <div class="down-arrow">
+                                <img src="assets/icons/expand-more.svg" alt="Icon to expand more" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employee details section -->
+            <div class="employees-section">
+                <div class="employee-header">
+                    <div class="employee-header-content">
+                        <h5 class="employee-title">Employees</h5>
+                        <p>Find all of your company's employee accounts and their associayed roles.</p>
+                    </div>
+                    <div class="employee-header-btn">
+                        <button class="btn-export" onclick="app.exportData()">
+                            <img src="assets/Images/masked-icon.png" alt="Icon for exporing the data" />
+                            EXPORT
+                        </button>
+                        <a title="add employee" href="addemployee.html">
+                            <button class="btn-add-employee">
+                                <img src="assets/icons/add.svg" alt="Plus symbol" />
+                                ADD EMPLOYEE
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="btn-alphabet">
+                    <div class="alpha-image">
+                        <img id="filterMainIcon" onclick="app.filterBar()" src="assets/Images/filter-open.png" alt="Filter symbol" />
+                    </div>
+                    <!-- alphabet buttons -->
+                    <div class="alphabet-content"></div> 
+                </div>
+                <div id="filterBar" class="filter">
+                    <div class="filter-dept-location">
+                        <span>Filter</span>
+                        <img src="assets/Images/filter-sort.png" alt="Filter icon" />
+                        <div class="select-filters" id="selectFilter">
+                            <div class="multi-select-container"></div>
+                            <!-- <select id="status" name="status">
+                                <option value="default" selected>Status</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">InActive</option>
+                            </select>
+                            <select id="loc" name="location">
+                                <option value="default" >Location</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="US">US</option>
+                                <option value="UK">UK</option>
+                            </select>
+                            <select id="dept" name="department">
+                                <option value="default" selected>Department</option>
+                                <option value="PE">PE</option>
+                                <option value="IT">IT</option>
+                            </select> -->
+                        </div>
+                        
+                    </div>
+                    <div class="filter-btn">
+                        <button onclick="app.resetFilter()" class="reset">Reset</button>
+                        <button onclick="app.applyFilter()" class="apply">Apply</button>
+                    </div>
+                </div>
+                <div class="employee-info">
+                    <div class="delete">
+                        <div class="delete-btn">
+                            <img src="assets/Images/left-down-arrow.png" alt="Left down arrow icon" />
+                            <button onclick="app.deleteCheckedRows()">Delete</button>
+                        </div>
+                        <div class="add-icon">
+                            <img src="assets/Images/table-add.png" alt="Add table row icon" />
+                        </div>
+                    </div>
+                    <table id="empTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox">
+                                </th>
+                                <th onclick="app.sortColumn(1)">
+                                    <span>USER</span>
+                                    <img src="assets/icons/unfold-more.svg" alt="Icon of unfold more" />
+                                </th>
+                                <th onclick="app.sortColumn(2)">
+                                    <span>LOCATION</span>
+                                    <img src="assets/icons/unfold-more.svg" alt="Icon of unfold more" />
+                                </th>
+                                <th onclick="app.sortColumn(3)">
+                                    <span>DEPARTMENT</span>
+                                    <img src="assets/icons/unfold-more.svg" alt="Icon of unfold more" />
+                                </th>
+                                <th onclick="app.sortColumn(4)">
+                                    <span>ROLE</span>
+                                    <img src="assets/icons/unfold-more.svg" alt="Icon of unfold more" />
+                                </th>
+                                <th onclick="app.sortColumn(5)">
+                                    <span>EMP NO</span>
+                                    <img src="assets/icons/unfold-more.svg" alt="Icon of unfold more" />
+                                </th>
+                                <th onclick="app.sortColumn(6)">
+                                    <span>STATUS</span>
+                                    <img src="assets/icons/unfold-more.svg" alt="Icon of unfold more" />
+                                </th>
+                                <th onclick="app.sortColumn(7)">
+                                    <span>JOIN DT</span>
+                                    <img src="assets/icons/unfold-more.svg" alt="Icon of unfold more" />
+                                </th>
+                                <th>
+                                    <img class="three-dots" src="assets/Images/more-dots.png" alt="Three dots image" />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </body>
+</html>

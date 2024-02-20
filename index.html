@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Tezo Dashboard</title>
+    </head>
+    <body>
+        <!-- Sidebar section -->
+        <div id="empSideBar" class="sidebar">
+            <div class="logo">
+                <img class="tezo-logo" src="assets/Images/tezo-logo.png" alt="Tezo company logo" />
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ALL</span>
+                <div class="all-content-box">
+                    <div class="all-content-info">
+                        <img src="assets/icons/dashboard.svg" alt="Icon of dashboard" />      
+                        <span>Dashboard</span>
+                    </div>
+                    <div class="all-content-arrow">
+                        <img src="assets/icons/chevron-right.svg" alt="Right pointing arrow">
+                    </div>
+                </div>
+                <a title="Employee" href="employee.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/employee-grey.svg" alt="Icon of employee" />
+                            <span>Employees</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ROLE / USER MANAGEMENT</span>
+                <a href="roles.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/roles-grey.svg" alt="Icon of roles in grey color" />
+                            <span>Roles</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow" />
+                        </div>
+                    </div>
+                </a>
+                <div class="all-content">
+                    <div class="all-content-info">
+                        <img src="assets/icons/access-right.svg" alt="Icon of access rights" />       
+                        <span>Access rights</span>
+                    </div>
+                    <div class="all-content-arrow">
+                        <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow" />
+                    </div>
+                </div>
+            </div>
+            <div class="update">
+                <div class="update-info">
+                    <span>Install new update 2.3.1A</span>
+                    <p>Allow to launch the new update for the AD application</p>
+                </div>
+                <div class="update-buttons">
+                    <button onclick="app.updateField()" class="dismiss">Dismiss</button>
+                    <button onclick="app.updateField()" class="accept">Accept</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- minised screen icons  -->
+        <div class="minimised-icons">
+            <img src="assets/icons/dashboard.svg" alt="Dashboard icon" />
+            <img src="assets/icons/employee-grey.svg" alt="Employee icon"/>
+            <img src="assets/icons/roles-grey.svg" alt="Roles icon" />
+            <img src="assets/icons/access-right.svg" alt="Assigning user icon" />
+        </div>
+
+        <div id="mainBody" class="container-body">
+            <!-- Search header -->
+            <img id="handleIcon" class="handle-icon" onclick="app.sideBar()" src="assets/Images/handle.png" alt="Closure of sidebar icon" />
+            <div class="searchbar-section">
+                <div class="main-header">
+                    <div class="header-icon-search">
+                        <div class="search-icon">
+                            <img src="assets/Images/search.png" alt="Search icon" />
+                        </div>
+                        <div class="search-content">
+                            <input type="text" name="name" placeholder="Search (Ctrl+l)" size="60">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-section-icons">
+                            <button><img src = "assets/Images/language.png" alt="Language change option" /></button>
+                            <button><img src = "assets/Images/more.png" alt="More icon with four dots" /></button>
+                            <button><img src = "assets/Images/theme.png" alt="Theme change symbol, a moon" /></button>
+                            <button><img src = "assets/Images/bell.png" alt="Notification icon" /></button>
+                        </div>
+                        <div class="profile">
+                            <img src="assets/Images/profile.png" alt="Profile picture" />
+                            <span class="status-icon"></span>
+                            <div class="profile-info">
+                                <span>John Abraham</span>
+                                <span class="admin">Admin</span>
+                            </div>
+                            <div class="down-arrow">
+                                <img src="assets/icons/expand-more.svg" alt="Icon to expand more" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </body>
+</html>

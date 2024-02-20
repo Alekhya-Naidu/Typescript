@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/roles.css">
+        <title>Roles</title>
+    </head>
+    <body>
+        <!-- Sidebar section -->
+        <div id="empSideBar" class="sidebar">
+            <div class="logo">
+                <img class="tezo-logo" src="assets/images/tezo-logo.png" alt="Tezo company logo" />
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ALL</span>
+                <a title="Employee" href="index.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/dashboard-grey.svg" alt="Icon of dashboard" />      
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+                <a title="Employee" href="employee.html">
+                    <div class="all-content"">
+                        <div class="all-content-info">
+                            <img src="assets/icons/employee-grey.svg" alt="Icon of employee" />
+                            <span>Employees</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ROLE / USER MANAGEMENT</span>
+                <a href="roles.html">
+                    <div class="all-content-box">
+                        <div class="all-content-info">
+                            <img src="assets/icons/roles.svg" alt="Icon of roles" />
+                            <span>Roles</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right.svg" alt="Right pointing arrow" />
+                        </div>
+                    </div>
+                </a>
+                <div class="all-content">
+                    <div class="all-content-info">
+                        <img src="assets/icons/access-right.svg" alt="Icon of access rights" />   
+                        <span>Access rights</span>
+                    </div>
+                    <div class="all-content-arrow">
+                        <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow" />
+                    </div>
+                </div>
+            </div>
+            <div class="update">
+                <div class="update-info">
+                    <span>Install new update 2.3.1A</span>
+                    <p>Allow to launch the new update for the AD application</p>
+                </div>
+                <div class="update-buttons">
+                    <button class="dismiss">Dismiss</button>
+                    <button class="accept">Accept</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- minised screen icons  -->
+        <div class="minimised-icons">
+            <img src="assets/icons/dashboard-grey.svg" alt="Dashboard icon" />
+            <img src="assets/icons/employee-grey.svg" alt="Employee icon"/>
+            <img src="assets/icons/roles.svg" alt="Roles icon" />
+            <img src="assets/icons/access-right.svg" alt="Assigning user icon" />
+        </div>
+
+        <div id="mainBody" class="container-body">
+            <!-- Search header -->
+            <img id="handleIcon" class="handle-icon" onclick="app.sideBar()" src="assets/Images/handle.png" alt="Closure of sidebar icon" />
+            <div class="searchbar-section">
+                <div class="main-header">
+                    <div class="header-icon-search">
+                        <div class="search-icon">
+                            <img src="assets/images/search.png" alt="Search icon" />
+                        </div>
+                        <div class="search-content">
+                            <input type="text" name="name" placeholder="Search (Ctrl+l)">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-section-icons">
+                            <button><img src = "assets/images/language.png" alt="Language change option" /></button>
+                            <button><img src = "assets/images/more.png" alt="More icon with four dots" /></button>
+                            <button><img src = "assets/images/theme.png" alt="Theme change symbol, a moon" /></button>
+                            <button><img src = "assets/images/bell.png" alt="Notification icon" /></button>
+                        </div>
+                        <div class="profile">
+                            <img src="assets/images/profile.png" alt="Profile picture" />
+                            <span class="status-icon"></span>
+                            <div class="profile-info">
+                                <span>John Abraham</span>
+                                <span class="admin">Admin</span>
+                            </div>
+                            <div class="down-arrow">
+                                <img src="assets/icons/expand-more.svg" alt="Icon to expand more" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Roles section   -->
+            <div class="roles-section">
+                <div class="role-header">
+                    <div class="role-header-content">
+                        <h5 class="role-title">Roles</h5>
+                        <p>All the roles are configured here</p>
+                    </div>
+                    <a title="add role" href="addrole.html">
+                        <div class="add-role-btn">
+                            <button>
+                                <img src="assets/icons/add.svg" alt="Plus symbol" />
+                                <span>ADD ROLE</span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+                <div class="filter">
+                    <div class="filter-dept-location">
+                        <span>Filter</span>
+                        <img src = "assets/Images/filter-sort.png" alt="Filter icon" />
+                        <select name="department">
+                            <option value="Dept" selected disabled>Department</option>
+                            <option value="PE">PE</option>
+                            <option value="IT">IT</option>
+                        </select>
+                        <select name="location">
+                            <option value="location" selected disabled>Location</option>
+                            <option value="PE">Hyderabad</option>
+                            <option value="IT">Canada</option>
+                        </select>
+                    </div>
+                    <div class="filter-btn">
+                        <button class="reset">Reset</button>
+                        <button class="apply">Apply</button>
+                    </div>
+                </div>
+                <div class="card-section">
+                    <div class = "card">
+                        <div class="card-title">
+                            <span>Customer Service Manager</span>
+                            <img src="assets/icons/edit.svg" alt="Icon of edit option" />    
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                    <span>Department</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>IT</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/location.svg" alt="Icon of location" />
+                                    <span>Location</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Hyderabad</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <span>Total Employees</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <img class="overlap-image1" src="assets/Images/girl-profile.png" alt="profile of a boy" />
+                                    <img class="overlap-image2" src="assets/images/boy-profile.png" alt="profile of a boy" />
+                                    <img class="overlap-image3" src="assets/images/women-profile.png" alt="profile of a boy" />
+                                    <img class="overlap-image4" src="assets/images/man-profile.png" alt="profile of a boy" />
+                                    <span class="overlap-image5">+43</span>
+                                </div>
+                            </div>
+                            <div class="card-alldetail">
+                                <a href="roledescription.html">
+                                    <span>View all Employees</span>
+                                    <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-title">
+                            <span>Ux Designer</span>
+                            <img src="assets/icons/edit.svg" alt="Icon of edit option" />   
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                    <span>Department</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Product Engg.</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/location.svg" alt="Icon of location" />
+                                    <span>Location</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Hyderabad</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <span>Total Employees</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <img class="overlap-image1" src="assets/Images/girl-profile.png" alt="Profile of a girl" />
+                                    <img class="overlap-image2" src="assets/images/boy-profile.png" alt="Profile of a boy" />
+                                    <img class="overlap-image3" src="assets/images/women-profile.png" alt="Profile of a women" />
+                                    <img class="overlap-image4" src="assets/images/man-profile.png" alt="Profile of a man" />
+                                    <span class="overlap-image5">+43</span>
+                                </div>
+                            </div>
+                            <div class="card-alldetail">
+                                <a href="roledescription.html">
+                                    <span>View all Employees</span>
+                                    <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-title">
+                            <span>Asistant Backend Developer</span>
+                            <img src="assets/icons/edit.svg" alt="Icon of edit option" />      
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                    <span>Department</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>UIUX</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/location.svg" alt="Icon of location" />
+                                    <span>Location</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Hyderabad</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <span>Total Employees</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <img class="overlap-image1" src="assets/Images/girl-profile.png" alt="Profile of a girl" />
+                                    <img class="overlap-image2" src="assets/images/boy-profile.png" alt="Profile of a boy" />
+                                    <img class="overlap-image3" src="assets/images/women-profile.png" alt="Profile of a women" />
+                                    <img class="overlap-image4" src="assets/images/man-profile.png" alt="Profile of a man" />
+                                    <span class="overlap-image5">+43</span>
+                                </div>
+                            </div>
+                            <div class="card-alldetail">
+                                <a href="roledescription.html">
+                                    <span>View all Employees</span>
+                                    <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-title">
+                            <span>Human Resource Manager</span>
+                            <img src="assets/icons/edit.svg" alt="Icon of edit option" />       
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                    <span>Department</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>IT</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/location.svg" alt="Icon of location" />
+                                    <span>Location</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Hyderabad</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <span>Total Employees</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <img class="overlap-image1" src="assets/Images/girl-profile.png" alt="Profile of a girl" />
+                                    <img class="overlap-image2" src="assets/images/boy-profile.png" alt="Profile of a boy" />
+                                    <img class="overlap-image3" src="assets/images/women-profile.png" alt="Profile of a women" />
+                                    <img class="overlap-image4" src="assets/images/man-profile.png" alt="Profile of a man" />
+                                    <span class="overlap-image5">+43</span>
+                                </div>
+                            </div>
+                            <div class="card-alldetail">
+                                <a href="roledescription.html">
+                                    <span>View all Employees</span>
+                                    <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-title">
+                            <span>Front End Developer</span>
+                            <img src="assets/icons/edit.svg" alt="Icon of edit option" />       
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                    <span>Department</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Product Engg.</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/location.svg" alt="Icon of location" />
+                                    <span>Location</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Hyderabad</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <span>Total Employees</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <img class="overlap-image1" src="assets/Images/girl-profile.png" alt="Profile of a girl" />
+                                    <img class="overlap-image2" src="assets/images/boy-profile.png" alt="Profile of a boy" />
+                                    <img class="overlap-image3" src="assets/images/women-profile.png" alt="Profile of a women" />
+                                    <img class="overlap-image4" src="assets/images/man-profile.png" alt="Profile of a man" />
+                                    <span class="overlap-image5">+43</span>
+                                </div>
+                            </div>
+                            <div class="card-alldetail">
+                                <a href="roledescription.html">
+                                    <span>View all Employees</span>
+                                    <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "card">
+                        <div class="card-title">
+                            <span>Senior Developer</span>
+                            <img src="assets/icons/edit.svg" alt="Icon of edit option" />      
+                        </div>
+                        <div class="card-info">
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/team.svg" alt="Icon of team of employees" />
+                                    <span>Department</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>UIUX</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <img src="assets/icons/location.svg" alt="Icon of location" />
+                                    <span>Location</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <span>Hyderabad</span>
+                                </div>
+                            </div>
+                            <div class="card-dept">
+                                <div class="card-dept-heading">
+                                    <span>Total Employees</span>
+                                </div>
+                                <div class="card-dept-value">
+                                    <img class="overlap-image1" src="assets/Images/girl-profile.png" alt="Profile of a girl" />
+                                    <img class="overlap-image2" src="assets/images/boy-profile.png" alt="Profile of a boy" />
+                                    <img class="overlap-image3" src="assets/images/women-profile.png" alt="Profile of a women" />
+                                    <img class="overlap-image4" src="assets/images/man-profile.png" alt="Profile of a man" />
+                                    <span class="overlap-image5">+43</span>
+                                </div>
+                            </div>
+                            <div class="card-alldetail">
+                                <a href="roledescription.html">
+                                    <span>View all Employees</span>
+                                    <img src="assets/icons/right-arrow.svg" alt="Right pointing arrow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </body>
+</html>

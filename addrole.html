@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Role</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/addrole.css" />
+    </head>
+    <body>
+        <!-- Sidebar section -->
+        <div id="empSideBar" class="sidebar">
+            <div class="logo">
+                <img class="tezo-logo" src="assets/images/tezo-logo.png" alt="Tezo company logo" />
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ALL</span>
+                <a title="Employee" href="index.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/dashboard-grey.svg" alt="Icon of dashboard" />      
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+                <a title="Employee" href="employee.html">
+                    <div class="all-content">
+                        <div class="all-content-info">
+                            <img src="assets/icons/employee-grey.svg" alt="Icon of employee" />
+                            <span>Employees</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="sidebar-subdiv">
+                <span class="title">ROLE / USER MANAGEMENT</span>
+                <a href="roles.html">
+                    <div class="all-content-box">
+                        <div class="all-content-info">
+                            <img src="assets/icons/roles.svg" alt="Icon of roles" />
+                            <span>Roles</span>
+                        </div>
+                        <div class="all-content-arrow">
+                            <img src="assets/icons/chevron-right.svg" alt="Right pointing arrow">
+                        </div>
+                    </div>
+                </a>
+                <div class="all-content">
+                    <div class="all-content-info">
+                        <img src="assets/icons/access-right.svg" alt="Icon of access rights">       
+                        <span>Access rights</span>
+                    </div>
+                    <div class="all-content-arrow">
+                        <img src="assets/icons/chevron-right-grey.svg" alt="Right pointing arrow">
+                    </div>
+                </div>
+            </div>
+            <div class="update">
+                <div class="update-info">
+                    <span>Install new update 2.3.1A</span>
+                    <p>Allow to launch the new update for the AD application</p>
+                </div>
+                <div class="update-buttons">
+                    <button class="dismiss">Dismiss</button>
+                    <button class="accept">Accept</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- minised screen icons  -->
+        <div class="minimised-icons">
+            <img src="assets/icons/dashboard-grey.svg" alt="Dashboard icon" />
+            <img src="assets/icons/employee-grey.svg" alt="Employee icon"/>
+            <img src="assets/icons/roles.svg" alt="Roles icon" />
+            <img src="assets/icons/access-right.svg" alt="Assigning user icon" />
+        </div>
+
+        <div id="mainBody" class="container-body">
+            <!-- Search header -->
+            <img id="handleIcon" class="handle-icon" onclick="app.sideBar()" src="assets/images/handle.png" alt="Closure of sidebar icon" />
+            <div class="searchbar-section">
+                <div class="main-header">
+                    <div class="header-icon-search">
+                        <div class="search-icon">
+                            <img src="assets/images/search.png" alt="Search icon" />
+                        </div>
+                        <div class="search-content">
+                            <input type="text" name="name" placeholder="Search (Ctrl+l)" size="60">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-section-icons">
+                            <button><img src = "assets/images/language.png" alt="Language change option" /></button>
+                            <button><img src = "assets/images/more.png" alt="More icon with four dots" /></button>
+                            <button><img src = "assets/images/theme.png" alt="Theme change symbol, a moon" /></button>
+                            <button><img src = "assets/images/bell.png" alt="Notification icon" /></button>
+                        </div>
+                        <div class="profile">
+                            <img src="assets/images/profile.png" alt="Profile picture" />
+                            <span class="status-icon"></span>
+                            <div class="profile-info">
+                                <span>John Abraham</span>
+                                <span class="admin">Admin</span>
+                            </div>
+                            <div class="down-arrow">
+                                <img src="assets/icons/expand-more.svg" alt="Icon to expand more" /> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- creating new role -->
+            <div class="create-role">
+                <h4>Create New Role</h4>
+                <div class="role-row">
+                    <div class="row-content">
+                        <label>Role Name</label>
+                        <input type="text" name="role" placeholder="Text" /> 
+                    </div>
+                    <div class="row-content" >
+                        <label>Department</label>
+                        <select name="department" class="dept">
+                            <option value="1" selected disabled>Select</option>
+                            <option value="UX">UX Designer</option>
+                            <option value="PE">PE Developer</option>
+                        </select>
+                    </div>     
+                </div>
+                <div class="role-row">
+                    <div class="row-content">
+                        <label>Description</label>
+                        <textarea rows="8" cols="62" placeholder="Text"></textarea> 
+                    </div>
+                </div>
+                <div class="role-row">  
+                    <div class="row-content">
+                        <label>Location</label>
+                        <select name="location" class="loc">
+                            <option value="1" selected disabled>Select</option>
+                            <option value="hyderbad">Hyderabad</option>
+                            <option value="US">USA</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="role-row">
+                    <div class="row-content">
+                        <label>Assign Employees</label>                           
+                        <input type="text" placeholder="Select for an employee" onclick="app.dropDown()"></select> 
+                        <div class="dropdown" id="dropDownList">
+                            <div class="emp-detail">
+                                <div class="emp-name">
+                                    <img src="assets/images/women-profile.png" alt="Profile picture of a girl" />
+                                    <span>Jennifer Dsousa</span>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" />
+                                </div>
+                            </div>
+                            <div class="emp-detail">
+                                <div class="emp-name">
+                                    <img src="assets/images/boy-profile.png" alt="Profile picture of a girl" />
+                                    <span>John Abraham</span>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" />
+                                </div>
+                            </div>
+                            <div class="emp-detail">
+                                <div class="emp-name">
+                                    <img src="assets/images/girl-profile.png" alt="Profile picture of a girl" />
+                                    <span>Alekhya Naidu</span>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-emp-btn">
+                    <button class="cancel">Cancel</button>
+                    <button class="add-emp">Add Role</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="scripts/script.js"></script>
+    </body>
+</html>
